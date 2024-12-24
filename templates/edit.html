@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+    <a href="/dashboard">Back to Dashboard</a>
+    <br><br>
+    <form action="/edit/{{ employee.id }}" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="{{ employee.name }}" required><br><br>
+        <label for="position">Position:</label><br>
+        <input type="text" id="position" name="position" value="{{ employee.position }}" required><br><br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
